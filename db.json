@@ -291,22 +291,5 @@
       "img": "pizza/d7bbbc4c74af442e8b9b3ea2faf3c941_584x584.webp"
     }
   ],
-  "users": [
-    {
-      "firstName": "",
-      "lastName": "",
-      "mail": "",
-      "address": "",
-      "password": 0,
-      "id": 1
-    },
-    {
-      "firstName": "чыфыфыф",
-      "lastName": "чыфчыф",
-      "mail": "ыфчыфыф",
-      "address": "чыфыфыфч",
-      "password": "ыфчыффыч",
-      "id": 2
-    }
-  ]
+  "users": []
 }
