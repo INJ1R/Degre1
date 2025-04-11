@@ -15,7 +15,15 @@ class AutorizationForm extends React.Component {
 
 	render() {
 		return (
-			<div className="popup-bg fixed w-full h-screen top-0 left-0 bg-gray-500/50 opacity-0 pointer-events-none">
+			<div 
+				className="popup-bg fixed w-full h-screen top-0 left-0 bg-gray-500/50 opacity-0 pointer-events-none"
+				onClick={(e) => {
+					if (e.target.classList.contains("popup-bg")) {
+						this.closePopup();
+					}
+				}}
+				>
+				
 				<form className="popup absolute top-1/2 left-1/2 w-6/12 p-6 bg-white translate-x-[-50%] translate-y-[-50%] rounded-xl opacity-0 pointer-events-none" ref={(el) => this.myForm = el}>
 					<label className="w-full mb-6 flex flex-col-reverse">
 
