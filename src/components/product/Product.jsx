@@ -1,4 +1,4 @@
-import { addItem } from "store/cart";
+import { addItem } from "../../store/cart.js";
 import style from "./Product.module.scss";
 
 export const Product = (props) => {

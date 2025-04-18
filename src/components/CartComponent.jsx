@@ -1,7 +1,7 @@
 import { Card } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 import { useStore } from "effector-react";
-import { cartStore, removeItem } from "store/cart";
+import { cartStore, removeItem } from "../store/cart.js";
 
 const CartComponent = () => {
 	const items = useStore(cartStore);

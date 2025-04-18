@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import { getData } from "utils/requests";
+import { getData } from "../../utils/requests.js";
 import { ItemsGroup } from "../ItemsGroup/ItemsGroup";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { NavGen } from "components/NavGen";
+import { NavGen } from "../NavGen";
 
 export const BodyComponent = () => {
 	const [windowSize, setWindowSize] = useState(innerWidth);
