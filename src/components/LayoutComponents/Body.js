@@ -14,49 +14,49 @@ export const BodyComponent = () => {
 		});
 	}, []);
 
-	const pizzaRef = useRef(null);
-	const sushiRef = useRef(null);
-	const drinksRef = useRef(null);
-	const comboRef = useRef(null);
-	const snackRef = useRef(null);
-	const dessertRef = useRef(null);
-	const sauceRef = useRef(null);
+	const knittedProductsRef = useRef(null);
+	const ceramicsRef = useRef(null);
+	const jewelryRef = useRef(null);
+	const decorRef = useRef(null);
+	const textilesRef = useRef(null);
+	const soapRef = useRef(null);
+	const woodenProductsRef = useRef(null);
 
 	const navLinks = [
 		{
-			name: "Пиццы",
+			name: "Вязанные изделия",
 			icon: "/nav/pizza.jpg",
-			ref: pizzaRef,
+			ref: knittedProductsRef,
 		},
 		{
-			name: "Суши",
+			name: "Керамика и гончарные изделия",
 			icon: "/nav/sushi.jpg",
-			ref: sushiRef,
+			ref: ceramicsRef,
 		},
 		{
-			name: "Напитки",
+			name: "Украшения ручной работы",
 			icon: "/nav/drink.jpg",
-			ref: drinksRef,
+			ref: jewelryRef,
 		},
 		{
-			name: "Снэки",
+			name: "Декор для дома",
 			icon: "/nav/snack.jpg",
-			ref: snackRef,
+			ref: decorRef,
 		},
 		{
-			name: "Комбо",
+			name: "Текстиль и вышивка",
 			icon: "/nav/combo.jpg",
-			ref: comboRef,
+			ref: textilesRef,
 		},
 		{
-			name: "Десерты",
+			name: "Мыло и косметика ручной работы",
 			icon: "/nav/dessert.jpg",
-			ref: dessertRef,
+			ref: soapRef,
 		},
 		{
-			name: "Соусы",
+			name: "Деревянные изделия",
 			icon: "/nav/sauce.jpg",
-			ref: sauceRef,
+			ref: woodenProductsRef,
 		},
 	];
 
@@ -66,23 +66,23 @@ export const BodyComponent = () => {
 	const calcSpaceBetween = containerWidth / linksCoun - itemLength;
 	const spaceBetween = calcSpaceBetween > 12 ? calcSpaceBetween : 12;
 
-	const [pizzas, setPizzasItem] = useState([]);
-	const [sushi, setSushiItem] = useState([]);
-	const [drinks, setDrinksItem] = useState([]);
-	const [snacks, setSnacksItem] = useState([]);
-	const [combo, setComboItem] = useState([]);
-	const [desserts, setDessertsItem] = useState([]);
-	const [sauces, setSaucesItem] = useState([]);
+	const [knittedProducts, setKnittedProductsItem] = useState([]);
+	const [ceramics, setCeramicsItem] = useState([]);
+	const [jewelry, setJewelryItem] = useState([]);
+	const [decor, setDecorItem] = useState([]);
+	const [textiles, setTextilesItem] = useState([]);
+	const [soap, setSoapItem] = useState([]);
+	const [woodenProducts, setWoodenProductsItem] = useState([]);
 
 	useEffect(() => {
 		getData().then((e) => {
-			setPizzasItem(e.pizzasData);
-			setSaucesItem(e.saucesData);
-			setSushiItem(e.sushiData);
-			setDessertsItem(e.dessertsData);
-			setComboItem(e.comboData);
-			setDrinksItem(e.drinksData);
-			setSnacksItem(e.snacksData);
+			setKnittedProductsItem(e.knittedProductsData);
+			setCeramicsItem(e.ceramicsData);
+			setJewelryItem(e.jewelryData);
+			setDecorItem(e.decorData);
+			setTextilesItem(e.textilesData);
+			setSoapItem(e.soapData);
+			setWoodenProductsItem(e.woodenProductsData);
 		});
 	}, []);
 
@@ -93,46 +93,42 @@ export const BodyComponent = () => {
 					<div>
 						<Swiper slidesPerView={"auto"} spaceBetween={spaceBetween}>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Пиццы" icon="/nav/pizza.jpg" ref={pizzaRef} />
+								<NavGen name="Вязанные изделия" icon="/nav/pizza.jpg" ref={knittedProductsRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Суши" icon="/nav/sushi.jpg" ref={sushiRef} />
+								<NavGen name="Керамика" icon="/nav/sushi.jpg" ref={ceramicsRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Напитки" icon="/nav/drink.jpg" ref={drinksRef} />
+								<NavGen name="Украшения" icon="/nav/drink.jpg" ref={jewelryRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Комбо" icon="/nav/combo.jpg" ref={comboRef} />
+								<NavGen name="Декор для дома" icon="/nav/combo.jpg" ref={decorRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen
-									name="Десерты"
-									icon="/nav/dessert.jpg"
-									ref={dessertRef}
-								/>
+								<NavGen name="Текстиль" icon="/nav/dessert.jpg" ref={textilesRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Соусы" icon="/nav/sauce.jpg" ref={sauceRef} />
+								<NavGen name="Мыло" icon="/nav/snack.jpg" ref={soapRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Снэки" icon="/nav/snack.jpg" ref={snackRef} />
+								<NavGen name="Деревянные изделия" icon="/nav/sauce.jpg" ref={woodenProductsRef} />
 							</SwiperSlide>
 						</Swiper>
 					</div>
 					<div className="flex flex-col gap-12 ">
-						<ItemsGroup items={pizzas} title={"Пиццы"} ref={pizzaRef} />
+						<ItemsGroup items={knittedProducts} title={"Вязанные изделия"} ref={knittedProductsRef} />
 
-						<ItemsGroup items={sushi} title={"Суши"} ref={sushiRef} />
+						<ItemsGroup items={ceramics} title={"Керамика и гончарные изделия"} ref={ceramicsRef} />
 
-						<ItemsGroup items={drinks} title={"Напитки"} ref={drinksRef} />
+						<ItemsGroup items={jewelry} title={"Украшения ручной работы"} ref={jewelryRef} />
 
-						<ItemsGroup items={snacks} title={"Снэки"} ref={snackRef} />
+						<ItemsGroup items={decor} title={"Декор для дома"} ref={decorRef} />
 
-						<ItemsGroup items={combo} title={"Комбо"} ref={comboRef} />
+						<ItemsGroup items={textiles} title={"Текстиль и вышивка"} ref={textilesRef} />
 
-						<ItemsGroup items={desserts} title={"Десерты"} ref={dessertRef} />
+						<ItemsGroup items={soap} title={"Мыло и косметика ручной работы"} ref={soapRef} />
 
-						<ItemsGroup items={sauces} title={"Соусы"} ref={sauceRef} />
+						<ItemsGroup items={woodenProducts} title={"Деревянные изделия"} ref={woodenProductsRef} />
 					</div>
 				</div>
 			</div>
