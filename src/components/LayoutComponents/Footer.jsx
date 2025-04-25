@@ -7,13 +7,13 @@ const Footer = ({trademark}) => {
 			<div className="flex relative w-2/5">
 				<div className="whitespace-nowrap flex flex-row items-center text-base absolute top-1">
 					<img src='/footer/logo.png' className="h-8 w-8 mr-2"></img>
-					<h1>Hexlet Pizza</h1>
+					<h1>Hexlet Handmade</h1>
 				</div>
 				<h1 className="whitespace-nowrap absolute bottom-1">{trademark}</h1>
 			</div>
 
 			<div className="flex flex-col w-1/5 pr-8">
-				<b className="text-base mb-2">Hexlet Pizza</b>
+				<b className="text-base mb-2">Hexlet Handmade</b>
 				<a className="mb-2" href="*">О компании</a>
 				<a className="mb-2" href="*">Пользовательское соглашение</a>
 				<a className="mb-2" href="*">Условия гарантии</a>
@@ -21,7 +21,7 @@ const Footer = ({trademark}) => {
 
 			<div className="flex flex-col w-1/5">
 				<b className="text-base">Помощь</b>
-				<a className="mb-2 mt-2" href="*">Ресторан</a>
+				<a className="mb-2 mt-2" href="*">Магазин</a>
 				<a className="mb-2" href="*">Контакты</a>
 				<a className="mb-2" href="*">Поддержка</a>
 				<a className="mb-2" href="*">Отследить заказ</a>

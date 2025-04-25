@@ -25,12 +25,12 @@ export const BodyComponent = () => {
 	const navLinks = [
 		{
 			name: "Вязанные изделия",
-			icon: "/nav/pizza.jpg",
+			icon: "/nav/knitted stuff.jpg",
 			ref: knittedProductsRef,
 		},
 		{
 			name: "Керамика и гончарные изделия",
-			icon: "/nav/sushi.jpg",
+			icon: "/nav/ceramic.jpg",
 			ref: ceramicsRef,
 		},
 		{
@@ -93,25 +93,25 @@ export const BodyComponent = () => {
 					<div>
 						<Swiper slidesPerView={"auto"} spaceBetween={spaceBetween}>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Вязанные изделия" icon="/nav/pizza.jpg" ref={knittedProductsRef} />
+								<NavGen name="Вязанные изделия" icon="/nav/knitted stuff.jpg" ref={knittedProductsRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Керамика" icon="/nav/sushi.jpg" ref={ceramicsRef} />
+								<NavGen name="Керамика" icon="/nav/ceramic.jpg" ref={ceramicsRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Украшения" icon="/nav/drink.jpg" ref={jewelryRef} />
+								<NavGen name="Украшения" icon="/nav/jewelry.jpg" ref={jewelryRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Декор для дома" icon="/nav/combo.jpg" ref={decorRef} />
+								<NavGen name="Декор для дома" icon="/nav/decoration.jpg" ref={decorRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Текстиль" icon="/nav/dessert.jpg" ref={textilesRef} />
+								<NavGen name="Текстиль" icon="/nav/textile.jpg" ref={textilesRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Мыло" icon="/nav/snack.jpg" ref={soapRef} />
+								<NavGen name="Мыло" icon="/nav/soup.jpg" ref={soapRef} />
 							</SwiperSlide>
 							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Деревянные изделия" icon="/nav/sauce.jpg" ref={woodenProductsRef} />
+								<NavGen name="Деревянные изделия" icon="/nav/wooden stuff.jpg" ref={woodenProductsRef} />
 							</SwiperSlide>
 						</Swiper>
 					</div>

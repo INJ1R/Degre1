@@ -11,7 +11,7 @@ export function LayoutComponent(){
     <Layout>
       <HeaderComponent />
       <BodyComponent />
-      <Footer trademark={`© Copyright ${new Date().getFullYear()} — Hexlet Pizza`}/>
+      <Footer trademark={`© Copyright ${new Date().getFullYear()} — Hexlet Handmade`}/>
     </Layout>
   );
 };

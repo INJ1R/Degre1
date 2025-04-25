@@ -32,7 +32,7 @@ export const HeaderComponent = () => {
             <div>
               <div className="border-t-2 w-full mb-2"/>
               <div className="mx-20 flex flex-row items-center flex-nowrap">
-                <p className='text-black font-bold grow'>Hexlet Pizza</p>
+                <p className='text-black font-bold grow'>Hexlet Handmade</p>
                 <Button onClick={showModal} type="text" className="bg-orange-400 text-gray-50 hover:bg-orange-400" icon={<ShoppingCartOutlined />}>Корзина</Button>
                 <AutorizationButton></AutorizationButton>
                   <Modal className="mr-0" title="Корзина" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}

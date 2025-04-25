@@ -26,12 +26,10 @@
     "build": "vite build",
     "serve": "vite preview",
 
-    "start": "concurrently \"npm run start-backend\" \"npm run start-front\"",
-    "start-front": "cross-env PORT=3001 react-scripts start",
-    "start-def": "react-scripts start",
+    "start": "concurrently \"npm run start-backend\" \"npm run dev\"",
     "lint": "eslint src/*",
     "lint-fix": "eslint src/* --fix",
-    "start-backend": "json-server --watch db.json"
+    "start-backend": "json-server --watch backend/db.json"
   },
   "eslintConfig": {
     "extends": [
