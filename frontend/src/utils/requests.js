@@ -1,14 +1,17 @@
 import axios from "axios";
 
-export const selectedItems = "http://localhost:3000/selectedItems";
+
+const url = 'https://degree-10ur.onrender.com/'
+
+export const selectedItems = url + "selectedItems";
 
 export const getData = async () => {
-	const knittedProductsData = (await axios.get("http://localhost:3000/knittedProducts")).data;
-	const ceramicsData = (await axios.get("http://localhost:3000/ceramics")).data;
-	const jewelryData = (await axios.get("http://localhost:3000/jewelry")).data;
-	const decorData = (await axios.get("http://localhost:3000/decor")).data;
-	const textilesData = (await axios.get("http://localhost:3000/textiles")).data;
-	const soapData = (await axios.get("http://localhost:3000/soap")).data;
-	const woodenProductsData = (await axios.get("http://localhost:3000/woodenProducts")).data;
+	const knittedProductsData = (await axios.get(url + "knittedProducts")).data;
+	const ceramicsData = (await axios.get(url + "ceramics")).data;
+	const jewelryData = (await axios.get(url + "jewelry")).data;
+	const decorData = (await axios.get(url + "decor")).data;
+	const textilesData = (await axios.get(url + "textiles")).data;
+	const soapData = (await axios.get(url + "soap")).data;
+	const woodenProductsData = (await axios.get(url + "woodenProducts")).data;
 	return {knittedProductsData, ceramicsData, jewelryData, decorData, textilesData, soapData, woodenProductsData};
 };
