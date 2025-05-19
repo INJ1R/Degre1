@@ -12,42 +12,42 @@
       "price": 100,
       "name": "Шерстяной шарф",
       "description": "Мягкий, уютный шарф ручной вязки из натуральной шерсти",
-      "img": "pizza/d7bbbc4c74af442e8b9b3ea2faf3c941_584x584.webp"
+      "img": "knittedProducts/1332980174655798424.jpg"
     },
     {
       "id": 2,
       "price": 550,
       "name": "Ажурные варежки",
       "description": "Тонкие вязаные варежки с красивым узором",
-      "img": "pizza/0d033c8eb9b24b21828d2fdb7dc3246d_584x584.webp"
+      "img": "knittedProducts/1332980174655813159.jpg"
     },
     {
       "id": 3,
       "price": 120,
       "name": "Плед из альпаки",
       "description": "Большой теплый плед, связанный из шерсти альпаки",
-      "img": "pizza/d9c609f1422247f2b87b6293eb461ff0_584x584.webp"
+      "img": "knittedProducts/1332980174655821262.jpg"
     },
     {
       "id": 4,
       "price": 120,
       "name": "Детские пинетки",
       "description": "Милые вязаные ботиночки для малышей",
-      "img": "pizza/27c9bbd0af3a4d1d84a086d9c2f1656d_584x584.webp"
+      "img": "knittedProducts/1332980174655823292.jpg"
     },
     {
       "id": 5,
       "price": 120,
       "name": "Свитер с норвежским узором",
       "description": "Традиционный теплый свитер с орнаментом",
-      "img": "pizza/ddadb2bd7f2d40459acddbe2f51a2389_584x584.webp"
+      "img": "knittedProducts/1332980174655832438.jpg"
     },
     {
       "id": 6,
       "price": 120,
       "name": "Шапка с помпоном",
       "description": "Стильная шапка с большим мягким помпоном",
-      "img": "pizza/02ca2561953b488993878d1f70e359de_584x584.webp"
+      "img": "knittedProducts/1332980174655836089.jpg"
     }
   ],
   "ceramics": [
@@ -56,35 +56,35 @@
       "price": 100,
       "name": "Кружка ручной работы",
       "description": "Уникальная керамическая кружка с глазурью",
-      "img": "sushi/fila3.webp"
+      "img": "ceramics/Кружка ручной работы.webp"
     },
     {
       "id": 8,
       "price": 100,
       "name": "Тарелка с ручной росписью",
       "description": "Декоративная тарелка с авторским рисунком",
-      "img": "sushi/filaBiiig.webp"
+      "img": "ceramics/Тарелка с ручной росписью.webp"
     },
     {
       "id": 9,
       "price": 100,
       "name": "Ваза для цветов",
       "description": "Изящная керамическая ваза с фактурной поверхностью",
-      "img": "sushi/filaostray.webp"
+      "img": "ceramics/Ваза для цветов.webp"
     },
     {
       "id": 10,
       "price": 100,
       "name": "Подсвечник",
       "description": "Глиняный подсвечник в этническом стиле",
-      "img": "sushi/florida.webp"
+      "img": "ceramics/Подсвечник.webp"
     },
     {
       "id": 11,
       "price": 100,
       "name": "Чайный набор",
       "description": "Комплект из чайника и чашек в едином дизайне",
-      "img": "sushi/kavai.webp"
+      "img": "ceramics/Чайный набор.png"
     }
   ],
   "jewelry": [
@@ -93,35 +93,35 @@
       "price": 100,
       "name": "Серьги из полимерной глины",
       "description": "Яркие легкие серьги с необычными формами",
-      "img": "drinks/cola.webp"
+      "img": "jewelry/Серьги из полимерной глины.png"
     },
     {
       "id": 13,
       "price": 100,
       "name": "Кольцо с натуральным камнем",
       "description": "Серебряное кольцо с вставкой из аметиста",
-      "img": "drinks/cola+without+sugar.webp"
+      "img": "jewelry/Кольцо с натуральным камнем.png"
     },
     {
       "id": 14,
       "price": 100,
       "name": "Браслет-шамбала",
       "description": " Браслет из бусин и натуральных камней",
-      "img": "drinks/fanta.webp"
+      "img": "jewelry/Браслет-шамбала.png"
     },
     {
       "id": 15,
       "price": 100,
       "name": "Кулон из эпоксидной смолы",
       "description": " Прозрачный кулон с цветочным дизайном",
-      "img": "drinks/sprite.webp"
+      "img": "jewelry/Кулон из эпоксидной смолы.png"
     },
     {
       "id": 16,
       "price": 100,
       "name": "Брошь из фетра",
       "description": "Мягкая брошь в форме животного или цветка",
-      "img": "drinks/sprite.webp"
+      "img": "jewelry/Брошь из фетра.png"
     }
   ],
   "decor": [
@@ -130,35 +130,35 @@
       "price": 100,
       "name": "Вышитая картина",
       "description": " Картина, вышитая крестиком или гладью",
-      "img": "snacks/fri.webp"
+      "img": "decor/Вышитая картина.png"
     },
     {
       "id": 18,
       "price": 100,
       "name": "Деревянная полка",
       "description": "Экологичная полка ручной работы",
-      "img": "snacks/wings.webp"
+      "img": "decor/Деревянная полка.png"
     },
     {
       "id": 19,
       "price": 100,
       "name": "Ловец снов",
       "description": "Декоративный оберег из ниток и перьев",
-      "img": "snacks/salad.webp"
+      "img": "decor/Ловец снов.png"
     },
     {
       "id": 20,
       "price": 100,
       "name": "Фетровый мобиль для детской",
       "description": "Подвесная игрушка для малышей",
-      "img": "snacks/cheese-sticks.webp"
+      "img": "decor/Фетровый мобиль для детской.png"
     },
     {
       "id": 21,
       "price": 100,
       "name": "Гобелен ручного ткачества",
       "description": "Тканое настенное панно",
-      "img": "snacks/cheese-sticks.webp"
+      "img": "decor/Гобелен ручного ткачества.png"
     }
   ],
   "textiles": [
@@ -167,42 +167,42 @@
       "price": 100,
       "name": "Вышитая подушка",
       "description": "Диванная подушка с цветочной вышивкой",
-      "img": "combo/2pizza.webp"
+      "img": "textiles/Вышитая подушка.png"
     },
     {
       "id": 23,
       "price": 100,
       "name": "Льняная сумка",
       "description": "Эко-сумка с ручной росписью",
-      "img": "combo/2pizza-with-drink.webp"
+      "img": "textiles/Льняная сумка.png"
     },
     {
       "id": 24,
       "price": 100,
       "name": "Скатерть с мережкой",
       "description": "Ажурная скатерть в винтажном стиле",
-      "img": "combo/3pizza.webp"
+      "img": "textiles/Скатерть с мережкой.png"
     },
     {
       "id": 25,
       "price": 100,
       "name": "Фартук с вышивкой",
       "description": "Кухонный фартук с именной монограммой",
-      "img": "combo/5pizza.webp"
+      "img": "textiles/Фартук с вышивкой.png"
     },
     {
       "id": 26,
       "price": 100,
       "name": "Лоскутное одеяло",
       "description": "Печворк из натуральных тканей",
-      "img": "combo/5pizza.webp"
+      "img": "textiles/Лоскутное одеяло.png"
     },
     {
       "id": 27,
       "price": 100,
       "name": "Полотенце с вышивкой",
       "description": "Махровое полотенце с именной меткой",
-      "img": "combo/5pizza.webp"
+      "img": "textiles/Полотенце с вышивкой.png"
     }
   ],
   "soap": [
@@ -211,28 +211,28 @@
       "price": 100,
       "name": "Натуральное мыло с лавандой",
       "description": "Мыло холодного отжима с эфирными маслами",
-      "img": "desserts/Cheesecake.webp"
+      "img": "soap/Натуральное мыло с лавандой.png"
     },
     {
       "id": 29,
       "price": 100,
       "name": "Бомбочка для ванны",
       "description": "Шипучая ароматная бомбочка с лепестками",
-      "img": "desserts/Chocolate cookies.webp"
+      "img": "soap/Бомбочка для ванны.png"
     },
     {
       "id": 30,
       "price": 100,
       "name": "Крем для рук",
       "description": "Увлажняющий крем с маслом ши",
-      "img": "desserts/Pancakes.webp"
+      "img": "soap/Крем для рук.png"
     },
     {
       "id": 31,
       "price": 100,
       "name": "Свеча-массажер",
       "description": "Аромасвеча с маслом для тела",
-      "img": "desserts/salted-Caramel-Muffin.webp"
+      "img": "soap/Свеча-массажер.png"
     }
   ],
   "woodenProducts": [
@@ -241,28 +241,28 @@
       "price": 100,
       "name": "Резная ложка",
       "description": " Деревянная ложка с ручной резьбой",
-      "img": "sauces/cheese.webp"
+      "img": "woodenProducts/Резная ложка.png"
     },
     {
       "id": 33,
       "price": 100,
       "name": "Разделочная доска",
       "description": "Доска с выжженным узором",
-      "img": "sauces/garlic.webp"
+      "img": "woodenProducts/Разделочная доска.png"
     },
     {
       "id": 34,
       "price": 100,
       "name": "Подставка под горячее",
       "description": "Набор подставок из дерева",
-      "img": "sauces/jami.webp"
+      "img": "woodenProducts/Подставка под горячее.png"
     },
     {
-      "id": 36,
+      "id": 35,
       "price": 100,
       "name": "Детская погремушка",
       "description": "Игрушка из экологичных материалов",
-      "img": "sauces/brown.webp"
+      "img": "woodenProducts/Детская погремушка.png"
     }
   ],
   "users": [

@@ -83,6 +83,8 @@ export const BodyComponent = () => {
 			setTextilesItem(e.textilesData);
 			setSoapItem(e.soapData);
 			setWoodenProductsItem(e.woodenProductsData);
+			console.log(e);
+			
 		});
 	}, []);
 
