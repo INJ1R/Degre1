@@ -4,6 +4,7 @@ export const cartDomain = createDomain();
 
 export const addItem = cartDomain.createEvent();
 export const removeItem = cartDomain.createEvent();
+export const clearCart = cartDomain.createEvent();
 
 export const cartStore = cartDomain
     .createStore([])
@@ -20,7 +21,7 @@ export const cartStore = cartDomain
     })
     .on(removeItem, (state, payload) => {
         const existingItem = state.find((item) => item.id === payload);
-        if (existingItem.quantity > 1) {
+        if (existingItem && existingItem.quantity > 1) {
             return state.map((item) =>
                 item.id === payload
                     ? { ...item, quantity: item.quantity - 1 }
@@ -28,4 +29,5 @@ export const cartStore = cartDomain
             );
         }
         return state.filter((item) => item.id !== payload);
-    });
+    })
+    .on(clearCart, () => []);

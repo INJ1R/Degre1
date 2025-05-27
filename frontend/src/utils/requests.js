@@ -1,18 +1,56 @@
-import axios from "axios";
+import axios from 'axios';
 
+const url = 'http://localhost:3000/';
 
-const url = 'https://degree-10ur.onrender.com/'
-
-
-export const selectedItems = url + "selectedItems";
+const handleRequest = async (request) => {
+  try {
+    const response = await request;
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 export const getData = async () => {
-	const knittedProductsData = (await axios.get(url + "knittedProducts")).data;
-	const ceramicsData = (await axios.get(url + "ceramics")).data;
-	const jewelryData = (await axios.get(url + "jewelry")).data;
-	const decorData = (await axios.get(url + "decor")).data;
-	const textilesData = (await axios.get(url + "textiles")).data;
-	const soapData = (await axios.get(url + "soap")).data;
-	const woodenProductsData = (await axios.get(url + "woodenProducts")).data;
-	return {knittedProductsData, ceramicsData, jewelryData, decorData, textilesData, soapData, woodenProductsData};
+  try {
+    const [
+      knittedProductsData,
+      ceramicsData,
+      jewelryData,
+      decorData,
+      textilesData,
+      soapData,
+      woodenProductsData
+    ] = await Promise.all([
+      handleRequest(axios.get(url + "knittedProducts")),
+      handleRequest(axios.get(url + "ceramics")),
+      handleRequest(axios.get(url + "jewelry")),
+      handleRequest(axios.get(url + "decor")),
+      handleRequest(axios.get(url + "textiles")),
+      handleRequest(axios.get(url + "soap")),
+      handleRequest(axios.get(url + "woodenProducts"))
+    ]);
+
+    return {
+      knittedProductsData,
+      ceramicsData,
+      jewelryData,
+      decorData,
+      textilesData,
+      soapData,
+      woodenProductsData
+    };
+  } catch (error) {
+    return {
+      knittedProductsData: [],
+      ceramicsData: [],
+      jewelryData: [],
+      decorData: [],
+      textilesData: [],
+      soapData: [],
+      woodenProductsData: []
+    };
+  }
 };
+
+export const selectedItems = url + "selectedItems";

@@ -1,0 +1,51 @@
+{
+  "orders": [
+    {
+      "id": 1748167860171,
+      "date": "2025-05-25T10:11:00.171Z",
+      "items": [
+        {
+          "id": 1,
+          "price": 100,
+          "name": "Шерстяной шарф",
+          "description": "Мягкий, уютный шарф ручной вязки из натуральной шерсти",
+          "img": "knittedProducts/1332980174655798424.jpg",
+          "image": "http://localhost:3000/images/knittedProducts/1332980174655798424.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "price": 120,
+          "name": "Плед из альпаки",
+          "description": "Большой теплый плед, связанный из шерсти альпаки",
+          "img": "knittedProducts/1332980174655821262.jpg",
+          "image": "http://localhost:3000/images/knittedProducts/1332980174655821262.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 5,
+          "price": 120,
+          "name": "Свитер с норвежским узором",
+          "description": "Традиционный теплый свитер с орнаментом",
+          "img": "knittedProducts/1332980174655832438.jpg",
+          "image": "http://localhost:3000/images/knittedProducts/1332980174655832438.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "price": 120,
+          "name": "Шапка с помпоном",
+          "description": "Стильная шапка с большим мягким помпоном",
+          "img": "knittedProducts/1332980174655836089.jpg",
+          "image": "http://localhost:3000/images/knittedProducts/1332980174655836089.jpg",
+          "quantity": 1
+        }
+      ],
+      "paymentMethod": "card",
+      "address": "gg",
+      "phone": "gg",
+      "name": "Рамин",
+      "total": 460
+    }
+  ]
+}

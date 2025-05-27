@@ -6,134 +6,99 @@ import "swiper/css";
 import { NavGen } from "../NavGen.jsx";
 
 export const BodyComponent = () => {
-	const [windowSize, setWindowSize] = useState(innerWidth);
+  const [windowSize, setWindowSize] = useState(innerWidth);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-	useEffect(() => {
-		window.addEventListener("resize", () => {
-			setWindowSize(innerWidth);
-		});
-	}, []);
+  useEffect(() => {
+    const handleResize = () => setWindowSize(innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-	const knittedProductsRef = useRef(null);
-	const ceramicsRef = useRef(null);
-	const jewelryRef = useRef(null);
-	const decorRef = useRef(null);
-	const textilesRef = useRef(null);
-	const soapRef = useRef(null);
-	const woodenProductsRef = useRef(null);
+  const knittedProductsRef = useRef(null);
+  const ceramicsRef = useRef(null);
+  const jewelryRef = useRef(null);
+  const decorRef = useRef(null);
+  const textilesRef = useRef(null);
+  const soapRef = useRef(null);
+  const woodenProductsRef = useRef(null);
 
-	const navLinks = [
-		{
-			name: "Вязанные изделия",
-			icon: "/nav/knitted stuff.jpg",
-			ref: knittedProductsRef,
-		},
-		{
-			name: "Керамика и гончарные изделия",
-			icon: "/nav/ceramic.jpg",
-			ref: ceramicsRef,
-		},
-		{
-			name: "Украшения ручной работы",
-			icon: "/nav/drink.jpg",
-			ref: jewelryRef,
-		},
-		{
-			name: "Декор для дома",
-			icon: "/nav/snack.jpg",
-			ref: decorRef,
-		},
-		{
-			name: "Текстиль и вышивка",
-			icon: "/nav/combo.jpg",
-			ref: textilesRef,
-		},
-		{
-			name: "Мыло и косметика ручной работы",
-			icon: "/nav/dessert.jpg",
-			ref: soapRef,
-		},
-		{
-			name: "Деревянные изделия",
-			icon: "/nav/sauce.jpg",
-			ref: woodenProductsRef,
-		},
-	];
+  const navLinks = [
+    { name: "Вязанные изделия", icon: "/nav/knitted stuff.jpg", ref: knittedProductsRef },
+    { name: "Керамика и гончарные изделия", icon: "/nav/ceramic.jpg", ref: ceramicsRef },
+    { name: "Украшения ручной работы", icon: "/nav/jewelry.jpg", ref: jewelryRef },
+    { name: "Декор для дома", icon: "/nav/decoration.jpg", ref: decorRef },
+    { name: "Текстиль и вышивка", icon: "/nav/textile.jpg", ref: textilesRef },
+    { name: "Мыло и косметика ручной работы", icon: "/nav/soup.jpg", ref: soapRef },
+    { name: "Деревянные изделия", icon: "/nav/wooden stuff.jpg", ref: woodenProductsRef }
+  ];
 
-	const linksCoun = navLinks.length;
-	const itemLength = 128;
-	const containerWidth = windowSize >= 1300 ? 1300 : windowSize;
-	const calcSpaceBetween = containerWidth / linksCoun - itemLength;
-	const spaceBetween = calcSpaceBetween > 12 ? calcSpaceBetween : 12;
+  const [knittedProducts, setKnittedProducts] = useState([]);
+  const [ceramics, setCeramics] = useState([]);
+  const [jewelry, setJewelry] = useState([]);
+  const [decor, setDecor] = useState([]);
+  const [textiles, setTextiles] = useState([]);
+  const [soap, setSoap] = useState([]);
+  const [woodenProducts, setWoodenProducts] = useState([]);
 
-	const [knittedProducts, setKnittedProductsItem] = useState([]);
-	const [ceramics, setCeramicsItem] = useState([]);
-	const [jewelry, setJewelryItem] = useState([]);
-	const [decor, setDecorItem] = useState([]);
-	const [textiles, setTextilesItem] = useState([]);
-	const [soap, setSoapItem] = useState([]);
-	const [woodenProducts, setWoodenProductsItem] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const data = await getData();
+        
+        setKnittedProducts(data.knittedProductsData);
+		console.log(knittedProducts)
+        setCeramics(data.ceramicsData);
+        setJewelry(data.jewelryData);
+        setDecor(data.decorData);
+        setTextiles(data.textilesData);
+        setSoap(data.soapData);
+        setWoodenProducts(data.woodenProductsData);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-	useEffect(() => {
-		getData().then((e) => {
-			setKnittedProductsItem(e.knittedProductsData);
-			setCeramicsItem(e.ceramicsData);
-			setJewelryItem(e.jewelryData);
-			setDecorItem(e.decorData);
-			setTextilesItem(e.textilesData);
-			setSoapItem(e.soapData);
-			setWoodenProductsItem(e.woodenProductsData);
-			console.log(e);
-			
-		});
-	}, []);
+    fetchData();
+  }, []);
 
-	return (
-		<div>
-			<div className="max-w-[1300px] px-[15px] box-border mx-auto">
-				<div className="flex flex-col gap-8 py-8">
-					<div>
-						<Swiper slidesPerView={"auto"} spaceBetween={spaceBetween}>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Вязанные изделия" icon="/nav/knitted stuff.jpg" ref={knittedProductsRef} />
-							</SwiperSlide>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Керамика" icon="/nav/ceramic.jpg" ref={ceramicsRef} />
-							</SwiperSlide>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Украшения" icon="/nav/jewelry.jpg" ref={jewelryRef} />
-							</SwiperSlide>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Декор для дома" icon="/nav/decoration.jpg" ref={decorRef} />
-							</SwiperSlide>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Текстиль" icon="/nav/textile.jpg" ref={textilesRef} />
-							</SwiperSlide>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Мыло" icon="/nav/soup.jpg" ref={soapRef} />
-							</SwiperSlide>
-							<SwiperSlide style={{ width: "min-content" }}>
-								<NavGen name="Деревянные изделия" icon="/nav/wooden stuff.jpg" ref={woodenProductsRef} />
-							</SwiperSlide>
-						</Swiper>
-					</div>
-					<div className="flex flex-col gap-12 ">
-						<ItemsGroup items={knittedProducts} title={"Вязанные изделия"} ref={knittedProductsRef} />
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
-						<ItemsGroup items={ceramics} title={"Керамика и гончарные изделия"} ref={ceramicsRef} />
+  const linksCount = navLinks.length;
+  const itemLength = 128;
+  const containerWidth = windowSize >= 1300 ? 1300 : windowSize;
+  const calcSpaceBetween = containerWidth / linksCount - itemLength;
+  const spaceBetween = calcSpaceBetween > 12 ? calcSpaceBetween : 12;
 
-						<ItemsGroup items={jewelry} title={"Украшения ручной работы"} ref={jewelryRef} />
-
-						<ItemsGroup items={decor} title={"Декор для дома"} ref={decorRef} />
-
-						<ItemsGroup items={textiles} title={"Текстиль и вышивка"} ref={textilesRef} />
-
-						<ItemsGroup items={soap} title={"Мыло и косметика ручной работы"} ref={soapRef} />
-
-						<ItemsGroup items={woodenProducts} title={"Деревянные изделия"} ref={woodenProductsRef} />
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div>
+      <div className="max-w-[1300px] px-[15px] box-border mx-auto">
+        <div className="flex flex-col gap-8 py-8">
+          <div>
+            <Swiper slidesPerView={"auto"} spaceBetween={spaceBetween}>
+              {navLinks.map((link, index) => (
+                <SwiperSlide key={index} style={{ width: "min-content" }}>
+                  <NavGen name={link.name} icon={link.icon} ref={link.ref} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          <div className="flex flex-col gap-12">
+            <ItemsGroup items={knittedProducts} title={"Вязанные изделия"} ref={knittedProductsRef} />
+            <ItemsGroup items={ceramics} title={"Керамика и гончарные изделия"} ref={ceramicsRef} />
+            <ItemsGroup items={jewelry} title={"Украшения ручной работы"} ref={jewelryRef} />
+            <ItemsGroup items={decor} title={"Декор для дома"} ref={decorRef} />
+            <ItemsGroup items={textiles} title={"Текстиль и вышивка"} ref={textilesRef} />
+            <ItemsGroup items={soap} title={"Мыло и косметика ручной работы"} ref={soapRef} />
+            <ItemsGroup items={woodenProducts} title={"Деревянные изделия"} ref={woodenProductsRef} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };

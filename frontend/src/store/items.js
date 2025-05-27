@@ -7,6 +7,6 @@ export const getItems = createEffect(()=>{
 	});
 });
 export const $pizza = createStore([])
-	.on(getItems.doneData,(data,newdata)=>{ //listen
+	.on(getItems.doneData,(data,newdata)=>{
 		return [...data,...newdata];
 	});

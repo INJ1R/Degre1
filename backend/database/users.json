@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": 1748167639172,
+      "mail": "r.medvedev2004@gmail.com",
+      "password": "$2b$10$zYiiqF6zSy4wcoEJm2IAUu3IufMgNW171p2zmFs8DtrgQSo5e8ZBC",
+      "firstName": "Рамин",
+      "lastName": "Медведев",
+      "address": "gg"
+    }
+  ]
+}

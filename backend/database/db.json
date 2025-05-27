@@ -264,23 +264,5 @@
       "description": "Игрушка из экологичных материалов",
       "img": "woodenProducts/Детская погремушка.png"
     }
-  ],
-  "users": [
-    {
-      "firstName": "",
-      "lastName": "",
-      "mail": "",
-      "address": "",
-      "password": 0,
-      "id": 1
-    },
-    {
-      "firstName": "weegrewg",
-      "lastName": "eqrgqer",
-      "mail": "gheqrh",
-      "address": "erherqh",
-      "password": "qerhqre",
-      "id": 2
-    }
   ]
 }
