@@ -2,7 +2,7 @@ import { addItem } from "../../store/cart.js";
 import style from "./Product.module.scss";
 
 export const Product = (props) => {
-  const { id, price, name, description, image } = props;
+  const { id, price, name, description, img } = props;
 
   return (
     <div
@@ -10,9 +10,10 @@ export const Product = (props) => {
       onClick={() => {
         addItem(props);
       }}
+      id={id}
     >
       <div className={style.Product__Media}>
-        <img src={image} alt={name} />
+        <img src={img} alt={name} />
       </div>
       <div className={style.Product__content}>
         <h4 className={style.Product__title}>{name}</h4>
