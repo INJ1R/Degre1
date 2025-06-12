@@ -31,8 +31,6 @@ export const getData = async () => {
       handleRequest(axios.get(url + "woodenProducts"))
     ]);
 
-    console.log(knittedProductsData)
-
     return {
       knittedProductsData,
       ceramicsData,
