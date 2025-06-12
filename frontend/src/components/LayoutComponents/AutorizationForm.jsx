@@ -14,7 +14,7 @@ class AuthorizationForm extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/register', {
+      const response = await axios.post('https://degree-10ur.onrender.com/register', {
         firstName: this.state.userName,
         lastName: this.state.userLastName,
         mail: this.state.mail,
