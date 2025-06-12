@@ -46,6 +46,35 @@
       "phone": "gg",
       "name": "Рамин",
       "total": 460
+    },
+    {
+      "id": 1749733684412,
+      "date": "2025-06-12T13:08:04.412Z",
+      "items": [
+        {
+          "id": 2,
+          "price": 550,
+          "name": "Ажурные варежки",
+          "description": "Тонкие вязаные варежки с красивым узором",
+          "img": "knittedProducts/1332980174655813159.jpg",
+          "image": "http://localhost:3000/images/knittedProducts/1332980174655813159.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "price": 120,
+          "name": "Плед из альпаки",
+          "description": "Большой теплый плед, связанный из шерсти альпаки",
+          "img": "knittedProducts/1332980174655821262.jpg",
+          "image": "http://localhost:3000/images/knittedProducts/1332980174655821262.jpg",
+          "quantity": 2
+        }
+      ],
+      "paymentMethod": "card",
+      "address": "rgreg",
+      "phone": "regerg",
+      "name": "ergerg",
+      "total": 790
     }
   ]
 }

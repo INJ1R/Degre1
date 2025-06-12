@@ -47,7 +47,7 @@ const CartComponent = ({ onCheckout }) => {
           {items.length === 0 && <div>Тут пока пусто</div>}
           {items.map((el) => (
             <Card key={el.id} className="flex mb-2 h-32 relative py-3.5">
-              <img className="w-24 absolute left-2 top-2" src={el.image} alt="none" />
+              <img className="w-24 absolute left-2 top-2" src={el.img} alt="none" />
               <div className="pl-2 absolute left-28 top-5 font-bold">
                 {el.name} (x{el.quantity})
               </div>
