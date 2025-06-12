@@ -14,7 +14,7 @@ class AuthorizationForm extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(import.meta.env.VITE_API_URL + '/register', {
+      const response = await axios.post(import.meta.env.VITE_API_URL + 'register', {
         firstName: this.state.userName,
         lastName: this.state.userLastName,
         mail: this.state.mail,
