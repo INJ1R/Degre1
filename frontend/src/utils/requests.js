@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const url = import.meta.env.'https://degree-10ur.onrender.com/';
+const url = 'https://degree-10ur.onrender.com/';
+// import.meta.env.
 
 const handleRequest = async (request) => {
   try {
