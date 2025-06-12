@@ -11,7 +11,7 @@ class LoginForm extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://degree-10ur.onrender.com/login', {
+      const response = await axios.post(import.meta.env.VITE_API_URL  + '/login', {
         mail: this.state.mail,
         password: this.state.password
       });

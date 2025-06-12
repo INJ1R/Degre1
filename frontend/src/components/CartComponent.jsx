@@ -24,7 +24,7 @@ const CartComponent = ({ onCheckout }) => {
     }
 
     try {
-      await axios.post("http://localhost:3000/create-order", {
+      await axios.post(import.meta.env.VITE_API_URL + "/create-order", {
         items,
         paymentMethod,
         address,

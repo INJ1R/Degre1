@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const url = 'https://degree-10ur.onrender.com/';
-// import.meta.env.
+const url = import.meta.env.VITE_API_URL;
 
 const handleRequest = async (request) => {
   try {
@@ -31,6 +30,8 @@ export const getData = async () => {
       handleRequest(axios.get(url + "soap")),
       handleRequest(axios.get(url + "woodenProducts"))
     ]);
+
+    console.log(knittedProductsData)
 
     return {
       knittedProductsData,

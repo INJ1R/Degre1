@@ -2,7 +2,8 @@ import { addItem } from "../../store/cart.js";
 import style from "./Product.module.scss";
 
 export const Product = (props) => {
-  const { id, price, name, description, image } = props;
+  const { id, price, name, description, img } = props;
+  console.log('product', props)
 
   return (
     <div
@@ -12,7 +13,7 @@ export const Product = (props) => {
       }}
     >
       <div className={style.Product__Media}>
-        <img src={image} alt={name} />
+        <img src={img} alt={name} />
       </div>
       <div className={style.Product__content}>
         <h4 className={style.Product__title}>{name}</h4>

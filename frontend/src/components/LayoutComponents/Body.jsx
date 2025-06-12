@@ -47,6 +47,7 @@ export const BodyComponent = () => {
       try {
         setLoading(true);
         const data = await getData();
+        console.log(data.knittedProductsData)
         
         setKnittedProducts(data.knittedProductsData);
 		console.log(knittedProducts)

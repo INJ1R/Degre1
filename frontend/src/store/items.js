@@ -1,12 +1,12 @@
-import { createEffect, createStore } from "effector";
-import axios from "axios";
+// import { createEffect, createStore } from "effector";
+// import axios from "axios";
 
-export const getItems = createEffect(()=>{
-	return axios.get("http://localhost:3000/pizza").then((e)=>{
-		return e.data;
-	});
-});
-export const $pizza = createStore([])
-	.on(getItems.doneData,(data,newdata)=>{
-		return [...data,...newdata];
-	});
+// export const getItems = createEffect(()=>{
+// 	return axios.get("http://localhost:3000/pizza").then((e)=>{
+// 		return e.data;
+// 	});
+// });
+// export const $pizza = createStore([])
+// 	.on(getItems.doneData,(data,newdata)=>{
+// 		return [...data,...newdata];
+// 	});
